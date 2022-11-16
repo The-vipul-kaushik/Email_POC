@@ -27,12 +27,13 @@ public class SendEmail extends TimerTask{
 	@Override
 	public void run() {
 	   
-        String to = "vipulkaushik1147@gmail.com";
+        String to = "";
 
-        String from = "kaushikvipul1501@gmail.com";
+        String from = "";
 
         String host = "smtp.gmail.com";
 
+        // Get system properties
         Properties properties = System.getProperties();
       
         
@@ -46,7 +47,7 @@ public class SendEmail extends TimerTask{
         Session session = Session.getInstance(properties, new Authenticator() {
             
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("kaushikvipul1501@gmail.com", "muikczcdjyfrxrsk");
+                return new PasswordAuthentication("", "");
             }
         });
 
